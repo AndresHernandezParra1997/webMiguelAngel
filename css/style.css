@@ -1,0 +1,175 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0
+}
+header, nav{
+    background-color: black;
+}
+
+header {
+    padding: 0 2em;
+    margin-bottom: 2em;
+    /*convertimos el elemento en una malla con 2 columnas, a la primera le asignamos el tamaño del logo para que siempre se vea igual
+    y a la segunda columna le asignamos el espacio sobrante*/
+    display: grid;
+    grid-template-columns: 213px auto;
+    /*con position fixed nos aseguramos de que este elemento siempre se encuentre en la parte superior de la pantalla, le especificamos top,
+    left y right a 0 para que ocupe todo el ancho*/
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10; /*esto es para asegurarnos de que este elemento se superponga siempre por encima del resto*/
+}
+
+/*esto sirve para centrar el logo vertical y horizontalmente*/
+.contenedor-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    padding: 1em;
+}
+
+/*asi hacemos que la separacion entre las opciones del menu de navegación sea uniforme*/
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+nav li {
+    list-style: none;
+}
+
+
+nav a {
+    color: white;
+    padding: .5em;
+    text-decoration: none;
+    text-transform:uppercase;
+   
+}
+nav a:hover{
+    color: yellow;
+    
+}
+.seleccionado{
+    color:yellow;
+}
+
+h1,h2,h3,h4 {
+    text-align: center;
+}
+
+h1{
+    background-color: black;
+    color: white;
+    /*como se trata de un elemento en linea, ocupa todo el ancho de la pantalla, 
+    con fit-content hacemos que el elemento solo mida el espacio que ocupa su contenido*/
+    width: fit-content; 
+    margin: 0 auto 2em;
+    text-transform: uppercase;
+    font-weight: 70;
+    padding: 2px;
+}
+h2{
+    font-weight: 60;
+    text-transform: uppercase;
+    font-size: small;
+}
+
+main {
+    margin-top: 82.5px; /*Como el header tiene position fixed, para que se pueda ver toda la imagen de portada hay que añadirle margen superior*/
+}
+
+
+body footer {
+    background-color: black;
+    color: white;
+    padding: 1em 1em .2em 1em;
+    border-top:1px solid rgb(209 174 141 / 47%);
+    display: grid;
+    grid-template-areas: "direccion redes"
+                         "direccion redes"
+                         "aviso aviso";
+    grid-template-columns: 30% auto;
+    margin-top: 1em;
+}
+
+.redes {
+    grid-area: redes;
+    display: flex;
+    justify-content: space-between;
+    padding:0 2em;
+    font-size: x-large;
+    align-items: center;
+}
+.redes i {
+    cursor: pointer;
+    color:white;
+}
+.redes i:hover{
+    scale: 120%;
+}
+.direccion {
+    grid-area: direccion;
+}
+.direccion p {
+    margin:.25em 0;
+}
+.aviso {
+    grid-area: aviso;
+    font-size: 10px;
+    text-align: center;
+    color: lightgray;
+}
+.aviso p {
+    margin: 0 10% .3em;
+}
+
+/*para el estilo de este boton he usado la herramienta online de www.bestcssbuttongenerator.com*/
+.myButton {
+	box-shadow: 3px 4px 0px 0px #ad8200;
+	background:linear-gradient(to bottom, #fff08f 5%, #f0ac38 100%);
+	background-color:#fff08f;
+	border-radius:13px;
+	border:1px solid #755800;
+	display:inline-block;
+	cursor:pointer;
+	color:black;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #d1942a;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #f0ac38 5%, #fff08f 100%);
+	background-color:#f0ac38;
+    color: white
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+    color: white
+}
+.myButtonDisabled{
+    box-shadow: 3px 4px 0px 0px #1a1916;
+	background:linear-gradient(to bottom, #dedcd1 5%, #c9c3b9 100%);
+	background-color:#dedcd1;
+	border-radius:13px;
+	border:1px solid #141312;
+	display:inline-block;
+	color:gray;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 15px;
+	text-decoration:none;
+	
+}
+
+

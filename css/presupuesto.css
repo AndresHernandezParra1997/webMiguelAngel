@@ -1,0 +1,90 @@
+body{
+    background-image: url("../resources/images/I6LC_HOVER.jpg");
+    background-size: cover;
+}
+form {
+    margin: 100px 10% 0;
+    background-color: rgb(209 174 141 / 70%);
+    padding: .5em 1em 1em;
+    border-radius: 10px;
+    border:1px solid black;
+    display: grid;
+    grid-template-areas: "titulo titulo"
+                         "cliente producto"
+                         "cliente producto"
+                         "confirmacion confirmacion";
+    grid-template-columns: 50% 50%;
+}
+
+.cliente{
+    grid-area: cliente;
+}
+.producto{
+    grid-area: producto;
+}
+.confirmacion{
+    grid-area: confirmacion;
+}
+form h1 {
+    color:black;
+    background-color: initial;
+    margin: 0 auto;
+    text-align: center;
+    grid-area: titulo;
+}
+fieldset {
+    background-color: rgb(209 174 141);
+    margin:.5em;
+}
+legend{
+    display: contents;
+    font-weight: bold;
+}
+input[type="checkbox"], label {
+    cursor: pointer;
+}
+
+.datoscli label{
+    display: inline-block;
+    width: 90px;
+}
+.datoscli input{
+    width: 70%;
+}
+.datospro > p {
+    display: flex;
+    justify-content: space-between;
+}
+.datospro > p > label{
+    display: inline-block;
+    width: 150px;
+}
+.datospro > p > input, select {
+    width: 100%
+} 
+.extras{
+    display: grid;
+    grid-template-areas: "span inputs";
+    grid-template-columns: 20% auto;
+}
+.extras span{
+    grid-area: span;
+}
+.extras div{
+    grid-area: inputs;
+}
+
+/*Por alguna razón que no entiendo estos input no terminan de alinearse bien con el resto, asique les he añadido
+margen para alinearlos bien*/
+.descuadre{
+    margin-left: 4px;
+}
+
+#precio{
+    text-align: right;
+}
+.botonera{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+}

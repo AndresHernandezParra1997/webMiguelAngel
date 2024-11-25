@@ -1,0 +1,22 @@
+{
+    "noticias": [
+      {
+        "titulo": "Premio en innovación industrial",
+        "contenido": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus blanditiis sit dolorem error facilis expedita molestiae, inventore accusamus, quae consequuntur modi. Minima magnam repellat doloribus illo nesciunt necessitatibus repudiandae ullam.",
+        "fecha": "2024-11-18",
+        "imagen":"noticia1.jpg"
+      },
+      {
+        "titulo": "Feria Habitad Valencia 2024",
+        "contenido": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+        "fecha": "2024-11-17",
+        "imagen":"noticia2.jpg"
+      },
+      {
+        "titulo": "Servicio Fast Service",
+        "contenido": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus blanditiis sit dolorem error facilis expedita molestiae, inventore accusamus, quae consequuntur modi.",
+        "fecha": "2024-11-16",
+        "imagen":"noticia3.jpg"
+      }
+    ]
+  }

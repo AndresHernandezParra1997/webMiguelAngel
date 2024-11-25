@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto</title>
+    <script src="https://kit.fontawesome.com/f733ff236d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/presupuesto.css">
+</head>
+<body>
+    <header>
+        <div class="contenedor-logo">
+            <img src="../resources/images/Logo.png" alt="Logotipo de Lumar Sofás"> 
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="presupuesto.html" class="seleccionado">Presupuesto</a></li>
+                <li><a href="galeria.html" >Galer&iacute;a</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+        
+        <form>
+        <h1>C&aacute;lculo de presupuesto</h1>
+           <fieldset class="cliente">
+            <legend>Datos del cliente</legend>
+            <div class="datoscli">
+                <p><label for="nombre">Nombre: </label> <input title="Solo se permiten letras" type="text" required name="nombre" id="nombre" pattern="[A-Za-zÀ-ÿ]+" maxlength="15" placeholder="Andrés"></p>
+                <p><label for="apellidos">Apellidos: </label> <input type="text" title="Solo se permiten letras y espacios" required name="apellidos" id="apellidos" pattern="[A-Za-zÀ-ÿ\s]+" maxlength="40" placeholder="Hernández García"></p>
+                <p><label for="telefono">Tel&eacute;fono:</label><input class="descuadre" title="Solo se permiten números" type="tel" pattern="[1-9]+" required name="telefono" id="telefono" maxlength="9" placeholder="XXXXXXXXX"></p>
+                <p><label for="email">Email:</label><input class="descuadre" type="email" required name="email" id="email" placeholder="email@gmail.com"></p>
+            </div>
+           </fieldset> 
+           <fieldset class="producto">
+                <legend>Datos del producto</legend>
+                <div class="datospro">
+                    <p><label for="producto">Producto: </label>
+                        <select onchange="calcularPrecio(); habilitarEnviar();" name="producto" id="producto" required>
+                            <option value="" selected>Sin seleccionar</option>
+                            <option value="Sofá barato">Sof&aacute; barato (100 €)</option>
+                            <option value="Sofá clase media-baja">Sof&aacute; clase media-baja (300 €)</option>
+                            <option value="Sofá clase media-alta">Sof&aacute; clase media-alta (750 €)</option>
+                            <option value="Sofá de lujo">Sof&aacute; de lujo (2500 €)</option>
+                        </select>
+                    </p>
+                    <p><label for="plazo">Plazo (d&iacute;as): </label> <input onchange="calcularPrecio()" type="number" required name="plazo" id="plazo" placeholder="Plazo en días" min="1"></p>
+                    <div class="extras">
+                        
+                        <span> Extras:</span>
+                        <div>
+                            <label for="instalacion"> Instalaci&oacute;n</label><input onchange="calcularPrecio()" type="checkbox" name="instalacion" id="instalacion">
+                            <label for="garantia"> Garant&iacute;a extendida</label><input onchange="calcularPrecio()" type="checkbox" name="garantia" id="garantia">
+                            <label for="mantenimiento">Mantenimiento peri&oacute;dico</label><input onchange="calcularPrecio()" type="checkbox" name="mantenimiento" id="mantenimiento">
+                        </div>
+                    </div>
+                    <p><label for="precio">Precio final: </label> <input type="text" disabled name="precio" id="precio" value="0 €"></p>
+
+                </div>
+            </fieldset>
+            <fieldset class="confirmacion">
+                <p><input onchange="habilitarEnviar(this)" type="checkbox" name="terminos" id="terminos" required> <label for="terminos"> T&eacute;rminos y condiciones</label> </p>
+                <p class="botonera"><input type="reset" class="myButton"> <input id="submit" class="myButtonDisabled" type="submit" disabled value="Enviar"> </p>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <div class="redes"> 
+            <a href="https://x.com"><i class="fa-brands fa-x-twitter"></i></a> 
+            <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i> </a>
+            <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        <div class="direccion">
+            <p>Polígono Industrial C/ Los Molares Nº 16   (FABRICA)</p>
+            <p>Crta Almansa S/N  (OFICINAS – SHOW ROOM)</p>
+            <p>Montealegre del Castillo, Albacete</p>
+            <p>02650 ESPAÑA</p>
+        </div>
+        <div class="aviso"><p> Aviso legal: Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque officiis quae fugit impedit deserunt architecto modi eum consequatur. Rem saepe vitae corrupti nesciunt ratione accusamus. Fugit, aspernatur assumenda quidem veritatis non, veniam beatae aliquam optio placeat ipsum illo blanditiis sit!</p></div>
+    </footer>
+    <script src="../js/presupuesto.js"></script>
+</body>
+</html>

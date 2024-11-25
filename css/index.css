@@ -1,0 +1,112 @@
+.portada {
+    
+    width: auto;
+}
+.portada img {
+    height: auto;
+    width: 100%;
+}
+.contenedor-titulo-portada {
+    background-color: rgb(209 174 141 / 47%);
+    width: fit-content;
+    margin: auto;
+    padding: 2em;
+    position: absolute;
+    top: 210px;
+    left: 0;
+    right: 0;
+}
+.imagen-noticia{
+    max-width: 230px;
+    margin: auto;
+    display: block;
+}
+.noticias {
+    padding: 0 2em;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.noticias article {
+    margin:0 1em;
+}
+.colorFondo{
+    padding:1em 0;
+    background-color: rgb(209 174 141 / 47%);
+}
+.contenedor-multisection{
+    display: grid;
+    grid-template-columns: 65% 35%;
+    
+}
+.contenedor-multisection section h4{
+    margin-bottom: 0;
+}
+.productos{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding:0 2em 1em 1em;
+    column-gap: 1em;
+}
+
+.imagen-producto{
+    width: 100%;
+    height:180px;
+    object-fit: cover;
+    margin: 1em;
+    border-radius: 3%;
+}
+
+.colecciones{
+    color:white;
+    background-color:black;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+/*Aquí solo estoy eliminando estilos por defecto de las listas que hacen que los botones se vean mal*/
+.colecciones ul {
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
+.colecciones li {
+    margin: 1em auto;
+}
+.colecciones button {
+    border-radius: 20%;
+}
+.etiquetas-grid{
+    display: grid;
+    /*Con grid template areas podemos repartir el espacio en el contenedor grid de formas más complejas*/
+    grid-template-areas: "et1 et1 et2 et2"
+                         "et3 et3 et3 et3"
+                         "et4 et4 et5 et5";
+}
+
+/*para que grid template areas funcione hay que asignar a cada elemento el area del grid a la que pertenece*/
+.et1{
+    grid-area: et1;
+}
+.et2{
+    grid-area: et2;
+}
+.et3{
+    grid-area: et3;
+}
+.et4{
+    grid-area: et4;
+}
+.et5{
+    grid-area: et5;
+}
+/*con este selector css estoy seleccionando aquellos elementos hr inmediatamente hermanos a un elemento h3*/
+h3 ~ hr{
+    width: 25%;
+}
+
+
+.activado{
+    background:linear-gradient(to bottom, #f0ac38 5%, #fff08f 100%);
+	background-color:#f0ac38;
+    color: white
+}

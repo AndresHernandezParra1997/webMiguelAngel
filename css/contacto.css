@@ -1,0 +1,25 @@
+main{
+    display: grid;
+    grid-template-columns: 50% auto;
+    padding: 1em;
+}
+#map{
+    width: 100%;
+    height: 500px;
+    border: solid 2px black;
+    
+}
+header{
+    z-index: 100000;
+}
+
+.datosContacto{
+    padding: 5%;
+}
+.datosContacto p{
+    text-align: center;
+}
+h1{
+    background-color: white;
+    color: black;
+}

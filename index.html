@@ -7,81 +7,87 @@
     <!-- insertamos el script de fontawesome para poder hacer uso de iconos de forma mas sencilla -->
     <script src="https://kit.fontawesome.com/f733ff236d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index.css">
 </head>
 <!-- utilizamos el evento onload para cargar dinámicamente las noticias -->
 <body onload="cargarPagina()">
-    <header>
-        <div class="contenedor-logo">
-            <img src="resources/images/Logo.png" alt="Logotipo de Lumar Sofás"> 
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="seleccionado">Inicio</a></li>
-                <li><a href="views/presupuesto.html">Presupuesto</a></li>
-                <li><a href="views/galeria.html">Galer&iacute;a</a></li>
-                <li><a href="views/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="portada">
-            <img src="resources/images/I6LC_HOVER.jpg" alt="Portada de la web de Lumar Sofás">
-            <div class="contenedor-titulo-portada">
-                <h1>Lumar Sof&aacute;s</h1>
-                <h2>Sentarse bien es sentirse bien</h2>
-            </div>
-        </section>
+    <div class="flex-container">
 
-        <section>
-            <h3>&Uacute;ltimas noticias</h3>
-            <hr>
-            <!-- dejamos el contenedor de las noticias vacio y le asignamos un id para hacer 
-            referencia a él fácilmente desde el código -->
-            <div class="noticias" id="section_noticias">
-
+        <header>
+            <div class="contenedor-logo">
+                <img src="resources/images/Logo.png" alt="Logotipo de Lumar Sofás" width="213" height="69"> 
             </div>
-        </section>
-        <section class="colorFondo">
-            <h3>Productos de temporada</h3>
-            <hr>
-            <div class="contenedor-multisection">
-                
-                <section>
-                    <h4>Imágenes de muestra</h4>
-                    <!-- cargamos igualmente las imagenes de esta seccion de forma dinámica -->
-                    <div  id="productos" class="productos">
-
-                    </div>
-                </section>
-                <section class="colecciones">
-                    <h4>Colecciones</h4>
-                    <ul class="etiquetas-grid">
-                        <li class="et1"><button class="myButton" onclick="dameProductosPorColeccion(this)">Eterna Comfort</button></li>
-                        <li class="et2"><button class="myButton" onclick="dameProductosPorColeccion(this)">Nube Suave</button></li>
-                        <li class="et3"><button class="myButton" onclick="dameProductosPorColeccion(this)">Hogar Vivo</button></li>
-                        <li class="et4"><button class="myButton" onclick="dameProductosPorColeccion(this)">Abrazo Sereno</button></li>
-                        <li class="et5"><button class="myButton" onclick="dameProductosPorColeccion(this)">Plenitud</button></li>
-                    </ul>
-                </section>
+            <nav>
+                <ul>
+                    <!-- aplicamos la clase seleccionado al evento del menu que hace referencia a la pagina actual -->
+                    <!-- como esta pagina se encuentra fuera de la carpeta views, hay que añadir la carpeta en los href del resto de enlaces -->
+                    <li><a href="index.html" class="seleccionado">Inicio</a></li>
+                    <li><a href="views/presupuesto.html">Presupuesto</a></li>
+                    <li><a href="views/galeria.html">Galer&iacute;a</a></li>
+                    <li><a href="views/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="margin-top">
+            <section class="portada">
+                <img src="resources/images/I6LC_HOVER.jpg" alt="Portada de la web de Lumar Sofás" width="1416" height="885">
+                <div class="contenedor-titulo-portada">
+                    <h1>Lumar Sof&aacute;s</h1>
+                    <h2>Sentarse bien es sentirse bien</h2>
+                </div>
+            </section>
+    
+            <section>
+                <h3>&Uacute;ltimas noticias</h3>
+                <hr>
+                <!-- dejamos el contenedor de las noticias vacio y le asignamos un id para hacer 
+                referencia a él fácilmente desde el código -->
+                <div class="noticias" id="section_noticias">
+    
+                </div>
+            </section>
+            <section class="colorFondo">
+                <h3>Productos de temporada</h3>
+                <hr>
+                <div class="contenedor-multisection">
+                    
+                    <section>
+                        <h4>Imágenes de muestra</h4>
+                        <!-- cargamos igualmente las imagenes de esta seccion de forma dinámica -->
+                        <div  id="productos" class="productos">
+    
+                        </div>
+                    </section>
+                    <section class="colecciones">
+                        <h4>Colecciones</h4>
+                        <ul class="etiquetas-grid">
+                            <!-- hacemos que los botones llamen a una funcion javascript que mostrara distintas imagenes en funcion del boton pulsado -->
+                            <li class="et1"><button class="myButton" onclick="dameProductosPorColeccion(this)">Eterna Comfort</button></li>
+                            <li class="et2"><button class="myButton" onclick="dameProductosPorColeccion(this)">Nube Suave</button></li>
+                            <li class="et3"><button class="myButton" onclick="dameProductosPorColeccion(this)">Hogar Vivo</button></li>
+                            <li class="et4"><button class="myButton" onclick="dameProductosPorColeccion(this)">Abrazo Sereno</button></li>
+                            <li class="et5"><button class="myButton" onclick="dameProductosPorColeccion(this)">Plenitud</button></li>
+                        </ul>
+                    </section>
+                </div>
+    
+            </section>
+        </main>
+        <footer>
+            <div class="redes"> 
+                <!-- usamos las clases de fontawesome para insertar iconos -->
+                <a href="https://x.com"><i class="fa-brands fa-x-twitter"></i></a> 
+                <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i> </a>
+                <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            <div class="direccion">
+                <p>Polígono Industrial C/ Los Molares Nº 16   (FABRICA)</p>
+                <p>Crta Almansa S/N  (OFICINAS – SHOW ROOM)</p>
+                <p>Montealegre del Castillo, Albacete</p>
+                <p>02650 ESPAÑA</p>
             </div>
-
-        </section>
-    </main>
-    <footer>
-        <div class="redes"> 
-            <a href="https://x.com"><i class="fa-brands fa-x-twitter"></i></a> 
-            <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i> </a>
-            <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-        <div class="direccion">
-            <p>Polígono Industrial C/ Los Molares Nº 16   (FABRICA)</p>
-            <p>Crta Almansa S/N  (OFICINAS – SHOW ROOM)</p>
-            <p>Montealegre del Castillo, Albacete</p>
-            <p>02650 ESPAÑA</p>
-        </div>
-        <div class="aviso"><p> Aviso legal: Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque officiis quae fugit impedit deserunt architecto modi eum consequatur. Rem saepe vitae corrupti nesciunt ratione accusamus. Fugit, aspernatur assumenda quidem veritatis non, veniam beatae aliquam optio placeat ipsum illo blanditiis sit!</p></div>
-    </footer>
+            <div class="aviso"><p> Aviso legal: Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque officiis quae fugit impedit deserunt architecto modi eum consequatur. Rem saepe vitae corrupti nesciunt ratione accusamus. Fugit, aspernatur assumenda quidem veritatis non, veniam beatae aliquam optio placeat ipsum illo blanditiis sit!</p></div>
+        </footer>
+    </div>
     <script src="js/index.js"></script>
 </body>
 </html>

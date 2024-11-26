@@ -3,69 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Galeria</title>
+    <!-- insertamos el script de fontawesome para poder hacer uso de iconos de forma mas sencilla -->
+
     <script src="https://kit.fontawesome.com/f733ff236d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/galeria.css">
 </head>
-<body>
-    <header>
-        <div class="contenedor-logo">
-            <img src="../resources/images/Logo.png" alt="Logotipo de Lumar Sofás"> 
-        </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="presupuesto.html">Presupuesto</a></li>
-                <li><a href="galeria.html"  class="seleccionado">Galer&iacute;a</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        
-        <section class="imagenPrincipal">
-            <h1>Galería</h1>
-            <div class="flip-container">
-                <div class="flip-card" onclick="hacerFlip()">
-                    <div class="flip-front">
-                        <img id="principal"  src="../resources/images/1.jpg" alt="imagen principal">
-                        
-                    </div>
-                    <div class="flip-back">
-                        <h2>Descripci&oacute;n</h2>
-                        <p id="textoOculto">texto oculto imagen x</p>
-                    </div>
-                </div>
+<body class="fondoImagen">
+    <div class="flex-container">
 
+        <header>
+            <div class="contenedor-logo">
+                <img src="../resources/images/Logo.png" alt="Logotipo de Lumar Sofás" width="213" height="69"> 
             </div>
-        </section>
-        
-        <div class="cuadricula">
-            <img onmouseenter="cargarImagen(this)" onclick="hacerFlip()" src="../resources/images/1.jpg" alt="imagen 1">
-            <img onmouseenter="cargarImagen(this)" onclick="hacerFlip()" src="../resources/images/2.jpg" alt="imagen 2">
-            <img onmouseenter="cargarImagen(this)" onclick="hacerFlip()" src="../resources/images/3.jpg" alt="imagen 3">
-            <img onmouseenter="cargarImagen(this)" onclick="hacerFlip()" src="../resources/images/4.jpg" alt="imagen 4">
-            <img onmouseenter="cargarImagen(this)" onclick="hacerFlip()" src="../resources/images/5.jpg" alt="imagen 5">
-            <img onmouseenter="cargarImagen(this)" onclick="hacerFlip()" src="../resources/images/6.jpg" alt="imagen 6">
-            <img onmouseenter="cargarImagen(this)" onclick="hacerFlip()" src="../resources/images/7.jpg" alt="imagen 7">
-            <img onmouseenter="cargarImagen(this)" onclick="hacerFlip()" src="../resources/images/8.jpg" alt="imagen 8">
-        </div>
-    </main>
-    <footer>
-        <div class="redes"> 
-            <a href="https://x.com"><i class="fa-brands fa-x-twitter"></i></a> 
-            <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i> </a>
-            <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            <nav>
+                <ul>
+                    <!-- como esta pagina se encuentra dentro de la carpeta views, debemos añadir ../ al href del index que se encuentra fuera -->
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="presupuesto.html">Presupuesto</a></li>
+                    <li><a href="galeria.html"  class="seleccionado">Galer&iacute;a</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- añadimos la clase galeria-main para que los estilos de esta pagina no afecten al resto de paginas -->
+        <main class="margin-top galeria-main">
+            
+            <!-- hacemos uso de multiples clases y la funcion hacerFlip para realizar el efecto de flip en la imagen principal -->
+            <section class="imagenPrincipal">
+                <h1>Galería</h1>
+                <div class="flip-container">
+                    <div class="flip-card" onclick="hacerFlip()">
+                        <div class="flip-front">
+                            <!-- no puedo especificar bien el width y height de esta imagen porque se va cambiando dinamicamente y si trato de modificarlos desde javascript
+                            las cantidades que se cargan son las resultantes tras la redimension en css, por lo tanto solo le he puesto el tamaño de la primera imagen
+                            que se coloca aqui de forma estática  -->
+                            <img id="principal"  src="../resources/images/1.jpg" alt="imagen principal" width="960" height="1068">
+                            
+                        </div>
+                        <div class="flip-back">
+                            <h2>Descripci&oacute;n</h2>
+                            <p id="textoOculto">texto oculto imagen x</p>
+                        </div>
+                    </div>
+    
+                </div>
+            </section>
+            
+            <div class="cuadricula">
+                <!-- usamos el evento onmouseenter para cambiar la imagen principal o el texto mostrado en el momento que el raton pase por encima de otra imagen -->
+                <img onmouseenter="cargarImagen(this)" onclick="hacerFlip()" src="../resources/images/1.jpg" alt="imagen 1" width="960" height="1068">
+                <img onmouseenter="cargarImagen(this)" onclick="hacerFlip()" src="../resources/images/2.jpg" alt="imagen 2" width="1071" height="960">
+                <img onmouseenter="cargarImagen(this)" onclick="hacerFlip()" src="../resources/images/3.jpg" alt="imagen 3" width="1200" height="900">
+                <img onmouseenter="cargarImagen(this)" onclick="hacerFlip()" src="../resources/images/4.jpg" alt="imagen 4" width="1200" height="900">
+                <img onmouseenter="cargarImagen(this)" onclick="hacerFlip()" src="../resources/images/5.jpg" alt="imagen 5" width="1200" height="900">
+                <img onmouseenter="cargarImagen(this)" onclick="hacerFlip()" src="../resources/images/6.jpg" alt="imagen 6" width="1200" height="900">
+                <img onmouseenter="cargarImagen(this)" onclick="hacerFlip()" src="../resources/images/7.jpg" alt="imagen 7" width="1200" height="800">
+                <img onmouseenter="cargarImagen(this)" onclick="hacerFlip()" src="../resources/images/8.jpg" alt="imagen 8" width="2138" height="1340">
             </div>
-        <div class="direccion">
-            <p>Polígono Industrial C/ Los Molares Nº 16   (FABRICA)</p>
-            <p>Crta Almansa S/N  (OFICINAS – SHOW ROOM)</p>
-            <p>Montealegre del Castillo, Albacete</p>
-            <p>02650 ESPAÑA</p>
-        </div>
-        <div class="aviso"><p> Aviso legal: Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque officiis quae fugit impedit deserunt architecto modi eum consequatur. Rem saepe vitae corrupti nesciunt ratione accusamus. Fugit, aspernatur assumenda quidem veritatis non, veniam beatae aliquam optio placeat ipsum illo blanditiis sit!</p></div>
-    </footer>
+        </main>
+        <!-- añadimos la clase galeria-footer para que los estilos de esta pagina no afecten al resto de paginas -->
+        <footer class="galeria-footer">
+            <div class="redes"> 
+                <!-- usamos las clases de fontawesome para insertar iconos -->
+                <a href="https://x.com"><i class="fa-brands fa-x-twitter"></i></a> 
+                <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i> </a>
+                <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            <div class="direccion">
+                <p>Polígono Industrial C/ Los Molares Nº 16   (FABRICA)</p>
+                <p>Crta Almansa S/N  (OFICINAS – SHOW ROOM)</p>
+                <p>Montealegre del Castillo, Albacete</p>
+                <p>02650 ESPAÑA</p>
+            </div>
+            <div class="aviso"><p> Aviso legal: Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque officiis quae fugit impedit deserunt architecto modi eum consequatur. Rem saepe vitae corrupti nesciunt ratione accusamus. Fugit, aspernatur assumenda quidem veritatis non, veniam beatae aliquam optio placeat ipsum illo blanditiis sit!</p></div>
+        </footer>
+    </div>
     <script src="../js/galeria.js"></script>
 </body>
 </html>

@@ -88,6 +88,20 @@ function dameProductosPorColeccion(coleccion) {
         "Nube Suave":[9]
     }
 
+    //aqui tenemos la anchura y altura de las imagenes que cargamos dinamicamente en px
+    const tamanyosImagen = [
+        [960, 1068],
+        [1071, 960],
+        [1200, 900],
+        [1200, 900],
+        [1200, 900],
+        [1200, 900],
+        [1200, 800],
+        [2138, 1340],
+        [1280, 739]
+    ]
+    
+
     //recogemos las imagenes de la coleccion que queremos mostrar
     const imagenes = colecciones[coleccion.textContent]
 
@@ -96,19 +110,30 @@ function dameProductosPorColeccion(coleccion) {
     productos.innerHTML = "";
 
     //introducimos las nuevas imagenes en la sección de productos
-    var imagen;
+    var imagen, w, h;
     for(i=0; i<imagenes.length; i++) {
         imagen = imagenes[i] + ".jpg";
-        insertarImagen(productos, imagen, "Descripcion de la imagen del producto", "imagen-producto");
+        w = tamanyosImagen[i][0]
+        h = tamanyosImagen[i][1]
+        insertarImagen(productos, imagen, "Descripcion de la imagen del producto", "imagen-producto", w, h);
     }
 
 }
 //esta función se encarga de crear e insertar un nodo de imagen en el contenedor que se le pase por parámetro, sería necesario validar
 //que contenedor es un nodo del DOM antes de hacer nada, pero voy a obviar esa parte.
-function insertarImagen(contenedor, nombreImagen, alt, clase) {
+function insertarImagen(contenedor, nombreImagen, alt, clase, w, h) {
     const imagenNode = document.createElement("img")
     imagenNode.src = "resources/images/"+nombreImagen;
     imagenNode.alt = alt;
+    if(clase == "imagen-noticia"){
+
+        imagenNode.width = 1080;
+        imagenNode.height = 1080;
+    }
+    else {
+        imagenNode.width = w;
+        imagenNode.height = h;
+    }
     imagenNode.classList.add(clase);
     contenedor.appendChild(imagenNode);
 }
